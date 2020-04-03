@@ -1,0 +1,10 @@
+Please Describe The Incidence?
+Please Elaborate Your The Description?
+What is Location,date and time of crime
+Are There any Identidied Accussed?(If No Please Enter No)
+Are there any Witnesses ?(Please Enter in Format "Name Aadhar Number")
+Please Enter Your Mobile Number?
+Please Enter Your Address?
+Please Enter Your Aadhar Number for Verification?
+Upload a Supporting Document? (if any)
+

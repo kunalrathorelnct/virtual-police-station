@@ -1,0 +1,10 @@
+Provide Details of Your Property?
+How do you know about this illegal occupation?
+What is Location of Your Propertyand since when your land illegally occupied?
+Person Detail Who illegal occupied your property?
+Are there any Witnesses ?(Please Enter in Format "Name Aadhar Number")
+Please Enter Your Mobile Number?
+Please Enter Your Address?
+Please Enter Your Aadhar Number for Verification?
+Upload Document to Prove Your Ownership?
+

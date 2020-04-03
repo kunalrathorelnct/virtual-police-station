@@ -1,0 +1,9 @@
+Describe the details of item/s was theifed?
+Please Elaborate the Incidence?
+Where did this incident takes placeand what is date and time of this theft?
+Please Describe about Theif?(if you have seen)
+Are there any Witnesses ?(Please Enter in Format "Name Aadhar Number")
+Please Enter Your Mobile Number?
+Please Enter Your Address?
+Please Enter Your Aadhar Number for Verification?
+Please Upload Any Supporting Document? (if any)

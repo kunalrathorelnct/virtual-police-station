@@ -1,0 +1,10 @@
+Please Describe How Fight was Started?
+Please Describe about your wounds or any other injury?
+What is the location ,date and time of incidence?
+With Whom this fight was occured?
+Are there any Witnesses ?(Please Enter in Format "Name Aadhar Number")
+Please Enter Your Mobile Number?
+Please Enter Your Address?
+Please Enter Your Aadhar Number for Verification?
+Upload any report you have to prove your injury?
+

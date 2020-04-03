@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>File Fir</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="speech.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand&display=swap" rel="stylesheet">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <!--<script src="https://code.responsivevoice.org/responsivevoice.js?key=SOKay4Pt"></script>-->
+    <link rel="stylesheet" href="viewfir.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="viewfir.js"></script>
+    
+        <script src="fir.js"></script>
+        
+        </head>
+        <body id="body">
+            <script type="text/javascript">
+                var DJANGO_STATIC_URL = '';
+            </script>
+            <div class="leftpart">
+            <div class="police"> 
+                <img id="policepic" src="background.png"/>
+            <div class="bubble">
+            <div class="circular-sb">
+                    <!--<a href="" class="typewrite" data-period="3500" data-type='[ "Hi, Im MrXXX.", "Fill all the details", "click start to start the recording", "click next for filling nxt details" ]'>
+                            <span class="wrap"></span>
+                        </a>--> 
+                        <p id="demo">HI,I'm Mr. Thanedar, Please Click Start to File an FIR</p>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                  </div>
+                </div>
+            </div>
+            <!--<div class="clip">
+                    <img src="clip.jpg">
+            </div>
+            -->
+            <div class="container">
+                    <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+        
+                    <div class="app"> 
+                        <!--<h3>Add New Note</h3>-->
+                        <div class="input-single" id="chng">
+                            <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6" onkeypress="keypress()" class="notetxt "></textarea>
+                        </div>       
+                        <button id="start-record-btn" title="Start Recording" class="button btnFade btnLightBlue" >Start</button>
+                        <button id="pause-record-btn" title="Pause Recording" class="button btnFade btnLightBlue" onclick="stop()">Stop</button>
+                        <button class="next" id="nextbtn" title="Pause Recording" class="button btnFade btnLightBlue" onclick="next()" disabled>Next</button>
+                        <!--<button id="save-note-btn" title="Save Note" class="button btnFade btnLightBlue">Save Note</button>  <br> <br><br>
+                        
+                        
+                        <h3>My Notes</h3>
+                        <ul id="notes">
+                            <li>
+                                <p class="no-notes">You don't have any notes.</p>
+                            </li>
+                        </ul>
+                        -->
+                        <p id="recording-instructions"><strong></strong>Start Recognition</strong> button and allow access.</p>
+                    </div>
+        
+                </div>
+            </div>
+
+                <div class="box effect8">
+                        
+                        <div class="page">
+                              <h2 id="firtitle">F.I.R.</h2>
+                                <form id="firform">
+                                    <label id="l1"></label>
+                                    <br>
+                                    <label id="l2"></label>
+                                    <br>
+                                    <label id="l6"></label>
+                                   <br>
+                                    <div id="l5txt"></div>
+                                    
+                                    <label id="l7"></label>
+                                    <br>
+                                         <label id="l9"></label>
+                                    
+                                    <br>
+                                    <label id="l10"></label>
+                                    <br>
+                                        <label id="l8"></label>
+                                    <br>
+                                    <label id="l3"></label>
+                                    <br>
+                                    <label id="l4"></label>
+                                    <br>
+                                    <label id="l5"></label>
+                                   
+                                    
+                                    <br>
+                                    <label id="l11"></label>
+                                <br>
+                               
+                                    <div id="l7btn"></div>
+                                    <br>
+                                </form>
+                               </div>
+                            </div>
+                            <script>
+                                    var screenheight=screen.height;
+                                    console.log(screenheight);
+                                    if(screenheight<800)
+                                    {
+                                        console.log("yes");
+                        document.getElementById("body").style.transform="scale(1.0)";
+                                    //$('.page').css('zoom','1.9');
+                                    }
+                                    else{
+                                        document.getElementById("body").style.transform="scale(1.1)";
+                                    }
+                                    </script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="/static/js/speech.js"></script>
+        </body>
+</html>

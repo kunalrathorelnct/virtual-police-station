@@ -1,0 +1,188 @@
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  
+  .box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    border: 2px solid #06D85F;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  .button:hover {
+    background: #06D85F;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 0.2s;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: rgb(245, 49, 49);
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  /*Let's make it appear when the page loads*/
+  .overlay:target:before {
+      display: none;
+  }
+  .overlay:before {
+    content:"";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 9;
+  }
+  .overlay .popup {
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: fixed;
+    top: 0;
+    left: 35%;
+    padding: 25px;
+    margin: 70px auto;
+    z-index: 10;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+  .overlay:target .popup {
+      top: -100%;
+      left: -100%;
+  }
+  
+  @media screen and (max-width: 1450px){
+    .box{
+      width: 70%;
+    }
+    .overlay .popup{
+      width: 50%;
+      left: 25%;
+    }
+  }
+   #head{
+      float:left;
+      margin:0;
+      }
+      #back{
+     float:right;
+  }
+        
+        h2{
+          font-family: 'Slabo 27px', serif;
+          font-size:20px;
+        }
+        h3 {
+          padding: 0;
+          line-height: 1.25;
+          font-family: 'Slabo 27px', serif;
+          font-size:20px;
+        }
+        #form {
+          max-width: 240px;
+          margin: 25px auto 0;
+        }
+          
+          input {
+            margin: 0 5px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 30px;
+            border: solid 1px #ccc;
+            box-shadow: 0 0 5px #ccc inset;
+            outline: none;
+            width: 20%;
+            transition: all .2s ease-in-out;
+            border-radius: 3px;
+          }
+            
+           input:focus {
+              border-color: rgb(0, 195, 255);
+              box-shadow: 0 0 5px rgb(0, 195, 255) inset;
+            }
+            
+            input::selection {
+              background: transparent;
+            }
+          
+          
+          button {
+            
+            width: 100%;
+            padding: 6px;
+            background-color: rgb(0, 195, 255);
+            border: none;
+            text-transform: uppercase;
+            border-radius:5px;
+            width:30%;
+            float:left;
+            color:white;
+            cursor:pointer;
+          }
+        
+        
+          .close {
+            border: solid 2px;
+            border-radius: 120px;
+            line-height: 19px;
+            font-size: 100%;
+            width: 30px;
+            position: absolute;
+            right: 5px;
+            top:0px;
+            background-color:white;
+          }           
+        
+        div {
+          
+          z-index: 1;
+        }
+        a{
+          color:grey;
+          font-family: 'Slabo 27px', serif;
+          font-size:20px;
+          padding-left:4px;
+        }
+        #resend{
+          float:right;
+        }

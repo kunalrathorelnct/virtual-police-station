@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>OTP</title>
+    <link rel="stylesheet" href="newotp.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+        <!--<script src="newotp.js"></script>-->
+</head>
+<body>
+<div class="box">
+	<a class="button" href="#">File Fir</a>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<div class="content">
+			 <div>
+                      <h2 id="head">Validate otp(One time password)</h2>
+                      <a class="close" href="#popup1">&times;</a>
+                      <!--<a href="" id="back">&lt-Go Back</a>-->
+                        <br>
+                      </div>
+                      <div>
+                      <h3>An otp has been sent to your number</h3>
+                      <h3>Please enter the 4-digit verification code we sent via SMS:</h3>
+                      <div id="form">
+                        <input type="text" onkeypress="onFocus(event)" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                        <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" /><input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" /><input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                      </div>
+                      <br>
+                        <div>
+                        <button class="btn btn-primary btn-embossed">Verify</button>
+                        <a href="#" id="resend">Resend OTP</a>
+                      </div>
+                      </div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

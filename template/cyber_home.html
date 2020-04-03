@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Cyber Crime</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="callout">
+      <div class="container">
+          <div class="col-xs-14">
+            <h1>Filing a Complaint on Cyber Crime</h1>
+            <hr/>
+            <p><span style="color:#000000;">
+              This portal is to facilitate victims/complainants to report cyber crime complaints online. This portal caters to complaints pertaining to cyber crimes only with special focus on cyber crimes against women and children. Complaints reported on this portal are dealt by law enforcement agencies/ police based on the information available in the complaints. It is imperative to provide correct and accurate details while filing complaint for prompt action.
+
+Please contact local police in case of an emergency or for reporting crimes other than cyber crimes. National police helpline number is 100. National women helpline number is 181.
+
+
+            </span></p>
+            <button><a href="{% url 'FIR:cyberreport' %}" style="color: #101010">FILE A COMPLAIN</a></button>
+          </div>
+      </div>
+    </div>
+
+    <div class="container marketing">
+
+     <!-- START THE FEATURETTES -->
+
+    <div class="col-sm-12">
+
+
+      <div class="row featurette">
+        <div class="col-sm-4">
+          <img class="featurette-image img-responsive center-block" src="{% static 'img/front-icons/hacking.jpeg' %}" alt="Generic placeholder image 1">
+        </div>
+        <div class="col-sm-8">
+          <h2 class="featurette-heading"><a class="nostyle" name="big-data">HACKING</a></h2>
+          <td><p>Hacking is unauthorized intrusion into a computer or a network. The person engaged in hacking activities is generally referred to as a hacker. This hacker may alter system or security features to accomplish a goal that differs from the original purpose of the system. <br><br>	Hackers employ a variety of techniques for hacking, including:<br><br><ul><li>Password cracking: the process of recovering passwords from data stored or transmitted by computer systems.</li><li>Trojan horse: serves as a back door in a computer system to allow an intruder to gain access to the system later.</li><li>Viruses: self-replicating programs that spread by inserting copies of the same program into other executable code files or documents.</li></ul></p></td> 
+				    </tr>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-sm-4">
+          <img class="featurette-image img-responsive center-block" src="{% static 'img/front-icons/creditcardfrud.png' %}" alt="Generic placeholder image 1">
+        </div>
+        <div class="col-sm-8">
+          <h2 class="featurette-heading"><a class="nostyle" name="build-and-delivery-tools">CREDIT CARD FRAUD</a></h2>
+         <td><p>Credit card fraud is a wide-ranging term for theft and fraud committed using or involving a payment card, such as a credit card or debit card, as a fraudulent source of funds in a transaction.The purpose may be to obtain goods without paying, or to obtain unauthorized funds from an account. Credit card fraud is also an adjunct to identity theft. According to the United States Federal Trade Commission, while the rate of identity theft had been holding steady during the mid 2000s, it increased by 21 percent in 2008. However, credit card fraud, that crime which most people associate with ID theft, decreased as a percentage of all ID theft complaints for the sixth year in a row.<br><br><ul><li>BIN Attack: Credit cards are produced in BIN ranges. Where an issuer does not use random generation of the card number, it is possible for an attacker to obtain one good card number and generate valid card numbers by changing the last four numbers using a generator.</li><li>Account Takeover: An account takeover occurs when a criminal poses as a genuine customer, gains control of an account and then makes unauthorized transactions. </li></ul></p></td> 
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-sm-4">
+          <img class="featurette-image img-responsive center-block" src="{% static 'img/front-icons/cyberstalking2.png' %}" alt="Generic placeholder image 1">
+        </div>
+        <div class="col-sm-8">
+          <h2 class="featurette-heading"><a class="nostyle" name="common-runtime">CYBER STALKING AND BULLYING</a></h2>
+          
+						<td><p>Cyberstalking is the use of the Internet or other electronic means to stalk or harass an individual, group, or organization. It may include false accusations, defamation, slander and libel. It may also include monitoring, identity theft, threats, vandalism, solicitation for sex, or gathering information that may be used to threaten, embarrass or harass.<br><br>Cyberstalking is a criminal offense under various state anti-stalking, slander and harassment laws. A conviction can result in a restraining order, probation, or criminal penalties against the assailant, including jail.</p></td> 
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-sm-4">
+          <img class="featurette-image img-responsive center-block" src="{% static 'img/front-icons/phising.jpeg' %}" alt="Generic placeholder image 1">
+        </div>
+        <div class="col-sm-8">
+          <h2 class="featurette-heading"><a class="nostyle" name="user-interface">PHISHING</a></h2>
+          <td><p>Phishing is a cybercrime in which a target or targets are contacted by email, telephone or text message by someone posing as a legitimate institution to lure individuals into providing sensitive data such as personally identifiable information, banking and credit card details, and passwords.<br><br><ul><li>Spear phishing: Phishing attempts directed at specific individuals or companies have been termed spear phishing. Attackers may gather personal information about their target to increase their probability of success.</li><li>Clone phishing: Clone phishing is a type of phishing attack whereby a legitimate, and previously delivered, email containing an attachment or link has had its content and recipient address(es) taken and used to create an almost identical or cloned email.</li><li>Phone phishing: Not all phishing attacks require a fake website. Messages that claimed to be from a bank told users to dial a phone number regarding problems with their bank accounts.</li></ul></p></td> 
+        </div>
+      </div>
+
+    </div>
+
+
+    </div><!-- /.container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.min.extra.js' %}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>-->
+  </body>
+</html>

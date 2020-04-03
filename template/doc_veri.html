@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 85px;
+  background-color: #f2f2f2;
+  padding-left: 10%;
+  width:40%;
+  margin-left:30%;
+}
+.container1 {
+  border-radius: 85px;
+  background-color: #f2f2f2;
+  padding: 50px;
+  
+  width:40%;
+  margin-left:30%;
+}
+.col-25 {
+  float: left;
+  width: 35%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 65%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<h2 style="text-align:center">Download From Here</h2>
+<p style="text-align: center">The Documents form are avaliable here</p>
+
+<div class="container">
+  <form>
+  <div class="row">
+    <div class="col-25">
+      <h2>Tenant Verifiaction</h2>
+    </div>
+    <div class="col-75">
+<a href="{% static 'forms/TENANT.pdf'%}" download><img src="{% static 'img/pdf.png' %}" width="80"></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <h2>Arms License </h2>
+    </div>
+    <div class="col-75">
+      <a href="{% static 'forms/armslicenseform.pdf' %}" download><img src="{% static 'img/pdf.png' %}" width="80"></a>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <h2>Gym Verification</h2>
+    </div>
+    <div class="col-75">
+      <a href="{% static 'forms/gymnasiumlicense.pdf' %}" download><img src="{% static 'img/pdf.png' %}" width="80"></a>
+    </div>
+</div>
+ </div>
+  </form>
+  <br><br>
+  <br><br>
+
+<h2 style="text-align:center">upoad Form here</h2>
+<p style="text-align: center">upload the addar and filled documents here</p>
+
+<div class="container1">
+<form method="POST" enctype="multipart/form-data">
+  <h3>upload form here</h3>
+  <div class="row">
+    <div class="col-25">
+
+      {% csrf_token %}
+
+  {% for hidden_field in form.hidden_fields %}
+    {{ hidden_field }}
+  {% endfor %}
+
+{% for field in form.visible_fields %}
+    <div class="form-group">
+      {{ field.label_tag }}
+      {{ field }}
+      {% if field.help_text %}
+        <small class="form-text text-muted">{{ field.help_text }}</small>
+      {% endif %}
+    </div>
+  {% endfor %} 
+<br>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  
+</form>
+</div>
+</body>
+</html>

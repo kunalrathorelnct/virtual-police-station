@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title>Virtual Police Station | Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <link rel="icon" type="image/png" href="{% static 'img/icons/favicon.ico' %}"/>
+
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <script type="text/javascript">
+  
+  function initGeolocation()
+     {
+        if( navigator.geolocation )
+        {
+           // Call getCurrentPosition with success and failure callbacks
+           navigator.geolocation.getCurrentPosition( success, fail );
+        }
+        else
+        {
+           alert("Sorry, your browser does not support geolocation services.");
+        }
+     }
+
+     function success(position)
+     {
+            
+
+    $.ajax({
+        type: "get",
+        url: "{% url 'FIR_app:police' %}?long="+position.coords.longitude+"&lat="+position.coords.latitude,
+        success: function (response) {
+            console.log(response);
+
+        }
+    });
+         console.log(position.coords.longitude);
+         console.log(position.coords.latitude);
+     }
+     function fail()
+     {
+        // Could not obtain location
+     }
+  </script>
+  <link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+</head>
+<body onLoad="initGeolocation();">
+  <div id="welcome-box">
+  <div id="front">
+    <a-scene embedded>
+      <a-sky  src="{% static 'img/police.jpg' %}" rotation="0 -130 0 auto"></a-sky>
+    </a-scene>
+  </div>
+  <div id="welcome">
+    <h1>WELCOME TO VIRTUAL POLICE STATION</h1>
+    <p>" सत्यमेव जयते , यतो धर्मस्ततो जय, सर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्‌भवेत् "</p>
+    <div id="language-selector">
+      <div class="form-group">
+         <select class="form-control">
+            <option value="-1">Choose Your Language</option>
+            <option value="1">English</option>
+            <option value="2">हिंदी  (Hindi)</option>
+            <option value="3">తెలుగు (Telugu)</option>
+            <option value="4">বাাংলা (Bengali)</option>
+            <option value="5">ગજુ રાતી (Gujarati)</option>
+            <option value="6">ಕನ್ನಡ (Kannada)</option>
+            <option value="7">मराठी (Marathi)</option>
+            <option value="8">ଓଡ଼ିଆ (Orriya)</option>
+            <option value="9">ਪੰ ਜਾਬ (Punjabi)</option>
+            <option value="10">தமிழ் (Tamil)</option>
+         </select>
+      </div>
+      <div id="btn-block" class="center-align"><button class="button"><span>ENTER </span></button></div> 
+     
+    </div>
+  </div>
+</div>
+  
+<div id="container">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/back1.jpg' %}" alt="Los Angeles" width="1100">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/back1.jpg' %}" alt="Chicago" width="1100">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/back1.jpg' %}" alt="New York" width="1100">
+    </div>
+  </div>
+</div>
+
+<div id="main">
+  
+   <div id="logo">
+      <img src="{% static 'img/delhi_police.png' %}">
+      <h1><span class="blinking1">VIR</span><span class="blinking2">TUAL</span><span class="blinking1"> POLI</span><span class="blinking2">CE STA</span><span class="blinking1">TION</span></h1>
+      <div id="quote"><div id="demo" class="carousel slide" data-ride="carousel" style="padding: 10px;">  
+      <div class="carousel-inner">
+        <div class="carousel-item active"  style="background: rgba(0, 0, 0, 0);">
+          <h5>"People of self-respect rather have death than
+            humiliation. Fire dies out but never turns cold."</h5>
+        </div>
+        <div class="carousel-item" style="background: rgba(0, 0, 0, 0);">
+          <h5>"People who are servants of desires are also servants of the whole world.
+            For those to whom desire is a servant, the whole world also is a servant."</h5>
+        </div>
+        <div class="carousel-item" style="background: rgba(0, 0, 0, 0);">
+          <h5>"A king who governs the whole earth may not satisfied. But a hermit is definitely content for whom a piece of stone and gold are equal.​"</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+   
+    <div id="options">
+      <div id="choice">
+          <a href="{% url 'FIR:fir_page' %}"><img src="{% static 'img/paper.png' %}"></a>
+          <a href="{% url 'FIR:docverify' %}"><img src="{% static 'img/doc.png' %}"></a>
+          <a href="{% url 'FIR:statusref' %}"><img src="{% static 'img/status.png' %}"></a>
+          <a href="{% url 'FIR:cyberhome' %}"><img src="{% static 'img/hacker.png' %}"></a>
+          <a><img src="{% static 'img/complain.png' %}"></a>
+      </div>
+      <div id="detail">
+          <p1>FIR</p1>
+          <p2>Document Verification</p2>
+          <p3>Status / Progress</p3>
+          <p4>Cyber Crime FIR</p4>
+          <p5>Complaint's</p5>
+          
+
+      </div>
+    </div>
+    <div id="emergency">
+      <a><img src="{% static 'img/siren.png' %}"></a>
+    </div>
+<!--    <div id="missing">
+
+    </div> -->
+    <div id="mySidenav" class="sidenav">
+      <a href="#" id="about">About</a>
+      <a href="#" id="blog">Blog</a>
+      <a href="#" id="projects">Projects</a>
+      <a href="#" id="contact">Contact</a>
+    </div>
+    <div class="holder">
+     <h3>INFORMATION</h3>
+      <ul id="ticker01">
+                  <li><a href="#">1) The first thing that most Javascript programmers</a></li>
+                  <li><a href="#">2) End up doing is adding some code</a></li>
+                  <li><a href="#">3) The code that you want to run</a></li>
+                  <li><a href="#">4) Inside of which is the code that you want to run</a></li>
+                  <li><a href="#">5) Right when the page is loaded</a></li>
+                  <li><a href="#">6) Problematically, however, the Javascript code</a></li>
+                  <li><a href="#">7) The first thing that most Javascript programmers</a></li>
+                  <li><a href="#">8) End up doing is adding some code</a></li>
+                  <li><a href="#">9) The code that you want to run</a></li>
+                  <li><a href="#">10) Inside of which is the code that you want to run</a></li>
+                  <li><a href="#">11) Right when the page is loaded</a></li>
+                  <li><a href="#">12) Problematically, however, the Javascript code</a></li>
+            </ul>
+    </div>
+    <div id="missing">
+      <h3>MISSING PERSONS</h3>
+      <div class="slidesh<div id="missing">
+
+    </div>ow-container">
+        
+        <div class="mySlides fade">
+          <img src="{% static 'img/missing.jpeg' %}" style="width:100%;">
+          <div class="text">Amitej Pratap Singh</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="{% static 'img/missing.jpeg' %}" style="width:100%;">
+          <div class="text">Pradum Kumar</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <img src="{% static 'img/missing.jpeg' %}" style="width:100%;">
+          <div class="text">Drishti Jaisinghani</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+      
+    </div>
+</div> 
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="{% static 'js/jq.js' %}"></script>
+</body>
+</html>

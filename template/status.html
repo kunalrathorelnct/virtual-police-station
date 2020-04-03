@@ -1,0 +1,69 @@
+{% load static %}
+<html>
+<head>
+    <title>Status FIR</title>
+    <link rel="stylesheet" href="{% static 'css/status.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Status</h1>
+        {% if not flag %}
+        <table class="container">
+            {% if type %}
+            <thead>
+                <tr>
+                    <th><h1>Reference No.</h1></th>
+                    <th><h1> Date Of F.I.R.</h1></th>
+                    <th><h1>Name</h1></th>
+                    <th><h1>Description</h1></th>
+                    <th><h1>Status</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>{{ instance.id }}</td>
+                    <td>{{ instance.datetime_of_FIR}}</td>
+                    <td>{{ instance.name_of_victim }}</td>
+                    <td>{{ instance.description_of_incidence }}</td>
+                    <td>{% if instance.passed_to_CCTNS %}
+                        Passed To CCTNS
+                        {% elif instance.complete %}
+                        FIR to be Passed to CCTNS
+                        {% elif not instance.complete %}
+                        FIR Not Complete
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+            {% else %}
+                <thead>
+                <tr>
+                    <th><h1>Reference No.</h1></th>
+                    <th><h1>Type of Verification</h1></th>
+                    <th><h1>Status</h1></th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>{{ instance.id }}</td>
+                    <td>{{ instance.type_of_verification }}</td>
+                    <td>{% if instance.verified %}
+                        Verified
+                        {% else %}
+                        Not Verified
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+
+            {% endif %}
+        </table>
+        {% else %}
+            <h2>No Records Found</h2>
+        {% endif %}
+    
+</body>
+</html>

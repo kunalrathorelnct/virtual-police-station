@@ -1,0 +1,9 @@
+What is your phone no and email address registered with your phone?
+Please Describe how your phone was lost/stolen ?
+Where did your Phone was lost/stolen and when did this incident happen?
+Do you Have Doubt on Anybody?
+Are there any Witnesses ?(Please Enter in Format "Name Aadhar Number")
+Please Enter Your Mobile Number?
+Please Enter Your Address?
+Please Enter Your Aadhar Number for Verification?
+Upload Mobile bill if available?

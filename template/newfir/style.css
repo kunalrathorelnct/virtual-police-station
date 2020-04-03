@@ -1,0 +1,283 @@
+
+ 
+body,html{
+    height:100%;
+    margin-bottom:0;
+}
+
+.bubble{
+   float:right;
+}
+.leftpart{
+    float:left;
+    width:55%;
+}
+#policepic{
+    margin-top:10%;
+    height:300px;
+    width:400px;
+}
+.police{
+    float:left;
+    margin-left:5%;
+    width:75%;
+}
+.clip{
+    margin-top:5px;
+    float:right;
+
+}
+.page{
+  font-family:"Arial Narrow, sans-serif";
+  font-size:10px;
+	width:85%;
+    margin:auto;
+    top:100px;
+    padding:55px 0;
+	background:white;
+  height:80%;
+	-webkit-border-bottom-left-radius:20px 500px;
+	-webkit-border-bottom-right-radius:500px 30px;
+    -webkit-border-top-right-radius:20px 100px;
+    -webkit-border-top-left-radius:20px 10px;
+	/*background:#fcf59b;*/
+
+}
+#firtitle{
+    text-align:center;
+    letter-spacing:4px;
+    font-size:35px;
+    margin-top:0px;
+    margin-bottom:10px;
+}
+#firform{
+    margin-left:15%;
+    margin-right:10%;
+    font-size:30px;
+    letter-spacing:3px;
+    word-spacing: 4px;
+    line-height: 40px;
+    letter-spacing:1.5px;
+}
+.firtxt{
+    width:50%;
+}
+.box h3{
+    text-align:center;
+      position:relative;
+      top:80px;
+  }
+  .box {
+      width:40%;
+      height:150%;
+      background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/15388/wood_texture.jpg);
+      margin:40px 10%;
+      margin-left:55%;
+  }
+
+  .effect8
+{
+  	position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+	content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+	right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+.page:before{
+	content:' ';
+	/*background:url(tape.png) no-repeat;*/
+    width:129px;
+    height:38px;
+    position:absolute;
+}
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(100) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+  a{
+	line-height:40px;
+	font-size:20px;
+	padding:30px 10px;
+}
+
+.circular-sb {
+    width: 250px;
+    height:100px;
+    border: 5px solid #00bfb6;
+    padding: 12% 0px;
+    margin-bottom:50%;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 900;
+    font-family: arial;
+    position: relative;
+    color: #00bfb6;
+    float:right;
+  }
+
+  .circle3 {
+    border: 5px solid #00bfb6;
+    position: absolute;
+    width: 25px;
+    padding: 20px;
+    border-radius: 50%;
+    left: -30px;
+    bottom: 10px;
+  }
+  
+  .circle3:before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    padding: 20px;
+    border-radius: 50%;
+    right: 0px;
+    bottom: 0px;
+    background: #fff;
+  }
+  
+  .circle4 {
+    border: 5px solid #00bfb6;
+    position: absolute;
+    width: 5px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    left: -70px;
+    bottom: 5px;
+  }
+  /*textarea*/
+  textarea {
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 500px;
+    height: 100px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+    border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
+    border-image: none;
+    border-radius: 6px 6px 6px 6px;
+    border-style: none solid solid none;
+    border-width: medium 1px 1px medium;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+    color: #555555;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: p.6em;
+    line-height: 1.4em;
+    padding: 5px 8px;
+    transition: background-color 0.2s ease 0s;
+  }
+  
+  
+  textarea:focus {
+      background: none repeat scroll 0 0 #FFFFFF;
+      outline-width: 0;
+  }
+  /* button start*/
+  .btnLightBlue {
+    background: #5DC8CD;
+  }
+  .btnFade.btnLightBlue:hover {
+    background: #01939A;
+  }
+
+.next{
+  background: #01939A;
+  cursor:default;
+}
+  button {
+    background:#5DC8CD;
+    display: block;
+    float: left;
+    width: 120px;
+    padding: 0;
+    margin: 10px 20px 10px 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    color: #FFF;
+    border-radius: 5px;
+    transition: all 0.2s ;
+    cursor:pointer;
+  }
+  /*button end*/
+  /*circle start*/
+  .circle {
+      margin-left:10%;
+      margin-top:0;
+    width: 20px;
+    height: 20px;
+    line-height: 200px;
+    border-radius: 50%; /* the magic */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .blue {
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/15388/wood_texture.jpg);  
+  }
+  label{
+    font-size:20px;
+  }
+  /*circle end*/
+  /*form textarea start*/
+  
+  /*form textarea end*/
+#time{width:70%;}
+.notetxt
+{
+    border:1px solid red;
+    
+}
+#note-textarea1{
+  width:150%;
+  margin: 20px 0;
+}
+#newtxt{
+  border:none;
+  background:white;
+}
+#newtxt1{
+  border:none;
+  background:white;
+}

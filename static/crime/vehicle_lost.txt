@@ -1,0 +1,9 @@
+What is RC number or number of your vehicle?
+Describe color and model and other details of vehicle?
+Where and when was your vehicle last seen?
+Do you Have Doubt on anybody?
+Are there any Witnesses Who have seen theif?(Please Enter in Format "Name Aadhar Number")
+Please Enter Your Mobile Number?
+Please Enter Your Address?
+Please Enter Your Aadhar Number for Verification?
+Upload RC Card of your vehicle in next steps?
