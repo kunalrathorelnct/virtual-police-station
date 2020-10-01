@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'Sih.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'btre_prod',
+        'USER': 'dbadmin',
+        'PASSWORD': 'redhat',
+        'HOST': 'localhost',
+        'PORT': 5432,
     }
 }
 
@@ -128,7 +132,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = MEDIA_DIR
 
-ALLOWED_HOSTS = ['192.168.43.63','127.0.0.1','192.168.0.109','sih2020vps.herokuapp.com']
+ALLOWED_HOSTS = ['192.168.43.63','127.0.0.1','192.168.0.109','sih2020vps.herokuapp.com','65.0.52.24']
 
 STATICFILES_DIRS = [STATIC_DIR,]
 REST_FRAMEWORK = {
@@ -148,3 +152,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
